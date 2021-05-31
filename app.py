@@ -28,8 +28,8 @@ def home():
 
 
 
-# if __name__ == "__main__":
-app.run()
+if __name__ == "__main__":
+	app.run(debug=True)
 
 # else:
 	# url = ngrok.connect(5000)
