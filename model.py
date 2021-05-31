@@ -25,8 +25,6 @@ def generate_top_10_values(id,model,data):
 		movies.append(data.loc[predictions[i][0]].title)
 
 	print(movies)
-	model = None
-	data = None
 	return movies,title
 
 
