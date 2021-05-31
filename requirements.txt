@@ -1,0 +1,9 @@
+joblib==0.15.1
+pyngrok==5.0.5
+requests_cache==0.6.2
+pandas==1.0.5
+requests==2.25.1
+numpy==1.19.5
+Flask==1.1.2
+beautifulsoup4==4.9.3
+scikit_learn==0.24.2
