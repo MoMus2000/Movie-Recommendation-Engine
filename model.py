@@ -21,10 +21,12 @@ def generate_top_10_values(id,model,data):
 
 	title = {data.loc[id].title}
 
-	for i in range(1,20):
+	for i in range(1,10):
 		movies.append(data.loc[predictions[i][0]].title)
 
 	print(movies)
+	model = None
+	data = None
 	return movies,title
 
 
