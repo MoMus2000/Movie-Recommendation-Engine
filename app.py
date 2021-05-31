@@ -3,7 +3,6 @@ import os
 from flask import render_template
 from generate_predictions import process_result
 from images import get_image_pics
-from pyngrok import ngrok
 
 
 app = Flask(__name__)
@@ -32,8 +31,8 @@ if __name__ == "__main__":
 	app.run(debug=True)
 
 # else:
-	# url = ngrok.connect(5000)
-	# print("TUNNEL URL:", url)
+# 	url = ngrok.connect(5000)
+# 	print("TUNNEL URL:", url)
 
 # if __name__ =="__main__":
 	# app.run(debug=True,host='0.0.0.0', port=8000)
