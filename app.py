@@ -28,12 +28,12 @@ def home():
 
 
 
-if __name__ == "__main__":
-	app.run(debug=True)
+# if __name__ == "__main__":
+app.run()
 
-else:
-	url = ngrok.connect(5000)
-	print("TUNNEL URL:", url)
+# else:
+	# url = ngrok.connect(5000)
+	# print("TUNNEL URL:", url)
 
 # if __name__ =="__main__":
 	# app.run(debug=True,host='0.0.0.0', port=8000)
