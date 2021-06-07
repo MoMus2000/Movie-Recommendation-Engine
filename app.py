@@ -21,9 +21,10 @@ def home():
 		images = get_image_pics(vals)
 		print(images)
 		test = zip(vals,images)
-		return render_template("index.html",your_list=vals,title=title,image_pics=images,test=test )
+		print(vals)
+		return render_template("index.html",your_list=vals,title=list(title)[0],image_pics=images,test=test )
 	else:
-		return render_template('index.html')
+		return render_template('index.html',title='')
 
 
 
