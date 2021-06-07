@@ -2,8 +2,6 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import requests_cache
-import aiohttp
-import asyncio
 from concurrent.futures import ThreadPoolExecutor
 
 requests_cache.install_cache('movie_urls',backend='sqlite',expire_after=180000000)
