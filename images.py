@@ -6,11 +6,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 requests_cache.install_cache('movie_urls',backend='sqlite',expire_after=180000000)
 
-def get_image_pics(vals):
+def get_image_pics(vals,hindi=False):
 	images = []
 	links = []
 	for i in range(0,len(vals)):
-		query = f"https://www.google.com/search?q={vals[i]} movie&tbm=isch"
+		if(hindi):
+			query = f"https://www.google.com/search?q={vals[i]} hindi movie&tbm=isch"
+		else:
+			query = f"https://www.google.com/search?q={vals[i]} movie&tbm=isch"
 		links.append(query)
 	with ThreadPoolExecutor() as executor:
 		sites_got = executor.map(requests.get, links)

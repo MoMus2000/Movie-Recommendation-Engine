@@ -26,6 +26,21 @@ def home():
 	else:
 		return render_template('index.html',title='')
 
+@app.route("/hindi", methods=['GET','POST'])
+def home_hindi():
+	if(request.method == "POST"):
+		search_result = request.form.get("search_query").lower()
+		vals,title = process_result(search_result,hindi=True)
+		if(len(vals)) == 0:
+			return render_template('index.html',title="search result not found please try again")
+		images = get_image_pics(vals,hindi=True)
+		print(images)
+		test = zip(vals,images)
+		print(vals)
+		return render_template("index.html",your_list=vals,title=list(title)[0],image_pics=images,test=test )
+	else:
+		return render_template('index.html',title='')
+
 
 
 if __name__ == "__main__":
