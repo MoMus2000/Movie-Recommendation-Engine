@@ -17,9 +17,10 @@ Project Containerized and deployed onto Heroku.
 
 ```
 1. Clone the project
-2. run: pip install -r requirements.txt in your shell
-3. run app.py as main file
-4. generate movie recommendations
+2. Create a new virtual environment (conda env -n <name>)
+3. run: pip install -r requirements.txt in your shell
+4. run app.py as main file
+5. generate movie recommendations
 ```
 
 ---
