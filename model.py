@@ -6,11 +6,11 @@ import heapq
 
 cwd = os.getcwd()
 
-MODEL = joblib.load(f"{cwd}/model.joblib")
-DATA = pd.read_csv(f"{cwd}/movie_dataset.csv")
+MODEL = joblib.load(f"{cwd}/models/model.joblib")
+DATA = pd.read_csv(f"{cwd}/data/movie_dataset.csv")
 
-HINDI_MODEL = joblib.load(f"{cwd}/hindi_model.joblib")
-HINDI_DATA = pd.read_csv(f"{cwd}/bollywood.csv")
+HINDI_MODEL = joblib.load(f"{cwd}/models/hindi_model.joblib")
+HINDI_DATA = pd.read_csv(f"{cwd}/data/bollywood.csv")
 
 
 def generate_top_10_values(id,model,data,hindi=False):
