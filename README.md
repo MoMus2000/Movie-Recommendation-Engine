@@ -1,8 +1,8 @@
 # Movie Recommender Engine
 
----
-
 [site link](https://movie-recommender12.herokuapp.com/)
+
+---
 
 ```
 Content based filtering model based on flask backend.
@@ -22,7 +22,6 @@ Project Containerized and deployed onto Heroku.
 
 ---
 
-
 ### Url Paths
 
 ```
@@ -30,9 +29,7 @@ Project Containerized and deployed onto Heroku.
 / -> index page for hollywood movies
 ```
 
-
 ---
-
 
 ## Contributor(s)
 - Mustafa Muhammad 
