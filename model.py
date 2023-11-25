@@ -9,20 +9,11 @@ cwd = os.getcwd()
 MODEL = joblib.load(f"{cwd}/models/model.joblib")
 DATA = pd.read_csv(f"{cwd}/data/movie_dataset.csv")
 
-HINDI_MODEL = joblib.load(f"{cwd}/models/hindi_model.joblib")
-HINDI_DATA = pd.read_csv(f"{cwd}/data/bollywood.csv")
-
-
-def generate_top_10_values(id,model,data,hindi=False):
+def generate_top_10_values(id,model,data):
 	predictions = []
 	movies = []
 
-	print("HINDI iS")
-	print(hindi)
-	if(hindi):
-		movie_title = 'original_title'
-	else:
-		movie_title = 'title'
+	movie_title = 'title'
 
 	for index,val in enumerate(model[id]):
 		predictions.append((index,val))
@@ -41,11 +32,8 @@ def generate_top_10_values(id,model,data,hindi=False):
 
 
 
-def get_id(data,name_of_movie,hindi=False):
-	if(hindi):
-		movie_title = 'original_title'
-	else:
-		movie_title = 'title'
+def get_id(data,name_of_movie):
+	movie_title = 'title'
 
 	datas = data.loc[data[movie_title].str.lower().str.contains(name_of_movie)]
 	return list(datas.index)
